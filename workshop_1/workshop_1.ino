@@ -10,7 +10,9 @@ void toggle_led();
 void setup() {
     pinMode(LED_PIN, OUTPUT);
     pinMode(BUTTON_PIN, INPUT);
-    attachInterrupt(digitalPinToInterrupt(BUTTON_PIN), change_button_state, CHANGE);
+    attachInterrupt(digitalPinToInterrupt(BUTTON_PIN),
+                    change_button_state,
+                    CHANGE);
     Serial.begin(9600);
 }
 
