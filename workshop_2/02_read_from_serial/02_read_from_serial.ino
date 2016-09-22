@@ -16,7 +16,9 @@ void setup() {
 void loop() {
     if (Serial.available() > 0) {
         char input = (char)Serial.parseInt();
-        while (Serial.available() > 0);
+        while (Serial.available() > 0) {
+            Serial.read();
+        };
         menu_state = (menu_states)input;
     }
     switch (menu_state) {
