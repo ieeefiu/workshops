@@ -9,7 +9,7 @@ int counter = 0;
 void setup() {
     Serial.begin(9600);
     pinMode(BUTTON_PIN, INPUT);
-    attachInterrupt(digitalPintoInterrupt(BUTTON_PIN), set_print, CHANGE);
+    attachInterrupt(digitalPinToInterrupt(BUTTON_PIN), set_print, CHANGE);
 }
 
 void loop() {

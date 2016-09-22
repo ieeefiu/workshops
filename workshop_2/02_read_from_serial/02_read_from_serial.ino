@@ -1,10 +1,10 @@
 #define LED_PIN 13
 
 volatile enum menu_states { IDLE,
-                            MENU,
                             LIGHT,
                             GARBAGE,
-                            GREETING } menu_state = MENU;
+                            GREETING,
+                            MENU } menu_state = MENU;
 
 void print_menu();
 
