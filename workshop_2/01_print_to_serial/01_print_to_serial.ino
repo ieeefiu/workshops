@@ -18,6 +18,7 @@ void loop() {
         Serial.print("You have pressed the button ");
         Serial.print(counter);
         Serial.println(" times.");
+        print_state = IDLE;
     }
 }
 
