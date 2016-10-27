@@ -5,9 +5,6 @@
 #include <SPI.h>
 #include "spieeprom.h"
 
-byte buffer[256];
-long address;
-
 SPIEEPROM disk;
 
 void setup() {
