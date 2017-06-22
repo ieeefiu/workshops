@@ -23,7 +23,7 @@ void loop() {
 }
 
 void change_button_state() {
-    int button = digitalRead(BUTTON_PIN);
+    int button = !digitalRead(BUTTON_PIN);
     if (button) {
         button_state = 1;
     }
