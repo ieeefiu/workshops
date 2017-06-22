@@ -9,7 +9,7 @@ void toggle_led();
 
 void setup() {
     pinMode(LED_PIN, OUTPUT);
-    pinMode(BUTTON_PIN, INPUT);
+    pinMode(BUTTON_PIN, INPUT_PULLUP);
     attachInterrupt(digitalPinToInterrupt(BUTTON_PIN),
                     change_button_state,
                     CHANGE);
