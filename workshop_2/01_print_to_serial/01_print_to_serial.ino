@@ -10,7 +10,7 @@ int counter = 0;
 
 void setup() {
     Serial.begin(9600);
-    pinMode(BUTTON_PIN, INPUT);
+    pinMode(BUTTON_PIN, INPUT_PULLUP);
     attachInterrupt(digitalPinToInterrupt(BUTTON_PIN), set_print, CHANGE);
 }
 
@@ -39,7 +39,7 @@ void count_presses() {
 }
 
 void set_print() {
-    int button = digitalRead(BUTTON_PIN);
+    int button = !digitalRead(BUTTON_PIN);
     if (button) {
         print_state = PRINT;        
     }
